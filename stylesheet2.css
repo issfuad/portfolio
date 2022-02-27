@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+
+:root {
+    --background: #15A083;
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+#top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #15A083;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#top:active {
+    background: #333333;
+}
+
+#top1 {
+    position: fixed;
+    right: 10px;
+    bottom: 55px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #15A083;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#top1:active {
+    background: #333333;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    /*background-image: url("pexels-ovan-62693.jpg");*/
+    /*background-blend-mode: multiply;*/
+    /*background-size: cover;*/
+    /*background-color: #ECE9E1;*/
+    align-items: center;
+}
+
+/* about */
+.summary {
+    display: flex;
+
+}
+
+div.experience {
+    display: block;
+    padding-left: 50px;
+    align-content: center;
+    /*place-items: center;*/
+}
+
+#title {
+    color: #304145;
+
+}
+
+#title-sch {
+    color: #304145;
+
+}
+
+.position {
+    color: #15A083;
+    font-weight: bolder;
+}
+
+.duties {
+    color: #333333;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+
+}
+
+.duration {
+    color: #86888a;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+/*---nav start --*/
+header {
+    background: var(--background);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+
+}
+
+div .experience {
+    min-height: 100%;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: auto;
+    text-align: center;
+
+
+}
+
+.footer-content h4 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: ' ';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: #FFDB35;
+    transform: rotateY(45deg);
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    header::after {
+        content: "";
+        display: table;
+        clear: both;
+
+    }
+
+    .logo {
+        float: left;
+        padding: 1px 0;
+
+    }
+
+    nav {
+        all: unset;
+
+        padding-left: 800px;
+    }
+
+    nav a {
+        opacity: 1;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+    }
+
+    nav ul {
+        display: flex;
+        margin: 0;
+
+        padding-left: 600px;
+
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+
+
+

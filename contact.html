@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--     <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactCSS.css">
+
+    <link rel="stylesheet" href="stylesheet2.css">
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sedgwick+Ave&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+    </style>
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="index.html">
+        </a>
+        <a href="index.html">
+            <label class="logo"><img src="F%20I-logos_white%201.png" alt="logo"></label>
+        </a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <nav>
+            <!--             <input type="checkbox" id="check" > -->
+            <!--             <label for="check" class="check-btn"> -->
+            <!--                 <i class="fas fa-bars"></i> -->
+            <!--             </label> -->
+
+            <ul id="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </div>
+
+</header>
+<section class="contact">
+    <div class="content1">
+        <h2>Contact Me</h2>
+        <blockquote>"The advance of technology is based on making it fit in so that you don't really even notice it, so
+            it's part of everyday life.”
+            <br>Bill Gates, Co-founder of Microsoft.
+        </blockquote>
+    </div>
+    <div class="container1">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <address>
+                        3730 S 148TH ST,<br>
+                        Tukwila,WA, 98168
+                    </address>
+
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>
+                        (206)683-6833
+                    </p>
+
+                </div>
+
+
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>
+                        fuadi@uw.edu
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="contactForm">
+            <form action="">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <label for="your-name"></label>
+                    <input type="text" name="" required="required" id="your-name">
+
+
+                    <span>Full Name</span>
+
+                </div>
+                <div class="inputBox">
+                    <label for="email"></label>
+                    <input type="text" name="" required="required" id="email">
+
+                    <span>Email</span>
+
+                </div>
+                <div class="inputBox">
+                    <label for="textarea"></label>
+                    <textarea required="required" id="textarea"></textarea>
+
+                    <span>Type Your Message...</span>
+                </div>
+                <div class="inputBox">
+
+                    <input type="submit" name="" value="Send">
+
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</section>
+
+<button id="top">
+    <i class="fa-solid fa-house"></i>
+</button>
+<script>
+    const homePage = document.querySelector("#top");
+    homePage.addEventListener("click", function () {
+        window.location.href = "index.html";
+        return false;
+    })
+</script>
+<button id="top1">
+    <i class="fa-solid fa-angles-left"></i>
+</button>
+<script>
+    const aboutPage = document.querySelector("#top1");
+    aboutPage.addEventListener("click", function () {
+        window.location.href = "about.html";
+        return false;
+    })
+</script>
+</body>
+</html>

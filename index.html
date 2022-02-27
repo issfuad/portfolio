@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Landing page</title>
+    <link rel="stylesheet" href="stylesheet2.css">
+    <!--     <link rel="stylesheet" href="stylesheet3.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--     <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sedgwick+Ave&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+    </style>
+
+</head>
+<body>
+
+
+<!-- Your code goes here -->
+<header>
+    <div class="container">
+        <a href="index.html">
+            <label class="logo"><img src="F%20I-logos_white%201.png" alt="logo"></label>
+        </a>
+
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <nav>
+            <!--             <input type="checkbox" id="check" > -->
+            <!--             <label for="check" class="check-btn"> -->
+            <!--                 <i class="fas fa-bars"></i> -->
+            <!--             </label> -->
+
+            <ul id="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+    </div>
+</header>
+<div class="experience">
+    <div id="experience">
+        <h1 id="title"> Experience </h1>
+    </div>
+    <h3 class="position">Shift Supervisor</h3>
+    <h4 class="company">Allied Universal - Seasonal</h4>
+    <p class="duration">July 2021 - November 2021 - 5 Months</p>
+    <ul class="duties">
+        <li>supervised and coordinated the delivery of quality services to the clients</li>
+        <li>supervised staff on assigned shift, providing coaching, recognition and <br>discipline within approved
+            empowerment range
+        </li>
+    </ul>
+    <h3 class="position">Process Assistant</h3>
+    <h4 class="company">Amazon Logistics</h4>
+    <p class="duration">October 2019 - August 2021 - 1 year 11 months </p>
+    <ul class="duties">
+        <li> maintained, implemented, improved safety rules at the facility, and also made sure hazmat
+            <br> components, equipment and products are in their designated spots
+        </li>
+        <li> occasionally assisted with production duties, training associates and verifying SOP (standard <br>
+            operating procedure) compliance
+        </li>
+        <li>Maintained daily management of department duties, including allocating labor, leading meetings,
+            <br>assigning job duties, providing work direction, and communicating with internal and external
+            suppliers.
+        </li>
+
+    </ul>
+    <h3 class="position">Sortation Associate</h3>
+    <h4 class="company">Amazon Logistics Part-time</h4>
+    <p class="duration">Mar 2018 - Oct 2019 - 1 year 8 months </p>
+    <ul class="duties">
+        <li> Efficiently and effectively received & stored goods inwards
+            <br>following Amazon's internal processes and procedures while <br>maintaining great customer service.
+        </li>
+
+    </ul>
+
+    <div id="School-Project">
+        <h1 id="title-sch"> School Project </h1>
+    </div>
+    <h3 class="position">Networking Project</h3>
+    <h4 class="company">University Of Washington - Tacoma</h4>
+    <p class="duration">Fall 2021</p>
+    <ul class="duties">
+        <li>Configured network hardware such as routers and switches</li>
+        <li>Administered basic configuration and security protocols on routers and switches</li>
+        <li>Assigned IP address to network through sub-netting</li>
+        <li>Implemented Built Small networks using packet tracer</li>
+        <li>Performed necessary troubleshooting of connectivity issues on both <br>Hardware labs and using Cisco
+            Packet Tracer
+        </li>
+
+    </ul>
+    <h3 class="position">System Analysis and Design</h3>
+    <h4 class="company">University Of Washington - Tacoma</h4>
+    <p class="duration">Fall 2021 </p>
+    <ul class="duties">
+        <li> Analyzed and gathered functional and system requirements</li>
+        <li> Created a Use-Case diagram for student feedback survey Project website</li>
+    </ul>
+    <h3 class="position">Clubs and Societies</h3>
+    <ul class="duties">
+        <li>Phi Theta Kappa - Honor Society for high achieving students</li>
+        <li>Grey Hat Club - Gaining knowledge about cyber security <br>breaches and attacks, spreading cyber security
+            knowledge to youth
+        </li>
+        <li>First Generation Students Club at University of Washington</li>
+    </ul>
+
+
+</div>
+<button id="top">
+    <i class="fa-solid fa-angles-up"></i>
+</button>
+<script>
+    const topScroll = document.querySelector("#top");
+    topScroll.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+    })
+</script>
+</body>
+</html>
