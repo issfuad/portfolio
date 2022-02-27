@@ -1,342 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sedgwick+Ave&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-.section {
-    width: 100%;
-
-}
-
-.section .container {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-
-}
-
-.container .title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.container .title h1 {
-    text-transform: uppercase;
-    font-size: 35px;
-    color: #15A083;
-    margin-top: 40px;
-
-}
-
-.container .title h1::after {
-    content: "";
-    height: 3px;
-    width: 300px;
-    background-color: #86888a;
-    border-radius: 25px;
-    display: block;
-    margin: auto;
-}
-
-.content {
-    float: left;
-    width: 55%;
-}
-
-.image {
-    float: right;
-    width: 40%;
-}
-
-.image img {
-    width: 100%;
-    height: auto;
-}
-
-.content .article h3 {
-    color: #3D3D3D;
-    font-size: 17px;
-
-
-}
-
-.content .article p {
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: black;
-    font-weight: bolder;
-}
-
-.content .article .button {
-    margin-top: 50px;
-}
-
-.content .article .button a {
-    text-decoration: none;
-    padding: 8px 25px;
-    background-color: #15A083;
-    border-radius: 40px;
-    color: #ffffff;
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-.content .article .button a:hover {
-    color: #ffffff;
-    background-color: #333333;
-    transition: 1s ease;
-}
-
-.container .social {
-    width: 100%;
-    clear: both;
-    margin-top: 50px;
-    text-align: center;
-    display: inline-block;
-}
-
-.container .social i {
-    font-size: 22px;
-    color: #ffffff;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    line-height: 45px;
-    text-align: center;
-    background-color: #15A083;
-    margin: 0 5px;
-}
-
-.container .social i:hover {
-    color: #ffffff;
-    background-color: #333333;
-    transition: 1s ease;
-    transform: rotate(360deg);
-}
-
-@media screen and (max-width: 768px) {
-    .section.container {
-        width: 80%;
-        display: block;
-        margin: auto;
-    }
-
-    .content {
-        float: none;
-        width: 100%;
-        display: block;
-        margin: auto;
-
-    }
-
-    .image {
-        float: none;
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .image img {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: auto;
-
-    }
-
-    .container .title h1 {
-        text-align: center;
-        font-size: 30px;
-
-    }
-
-    .container .article .button {
-        text-align: center;
-
-    }
-
-    .container .article .button a {
-        padding: 6px 15px;
-        font-size: 16px;
-    }
-
-    .container .social i {
-        font-size: 19px;
-        height: 35px;
-        width: 35px;
-        line-height: 35px;
-    }
-
-}
-
-/*--nav--*/
-:root {
-    --background: rgba(0, 119, 181, 0.98);
-
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-header {
-    background: #15A083;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-
-}
-
-.nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 1em;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    display: block;
-    background: white;
-    height: 2px;
-    width: 2em;
-    border-radius: 2px;
-    position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-    content: ' ';
-    position: absolute;
-}
-
-.nav-toggle-label span::before {
-    bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-    top: 7px;
-}
-
-nav {
-    position: absolute;
-    text-align: left;
-    top: 100%;
-    left: 0;
-    background: var(--background);
-    width: 100%;
-    transform: scale(1, 0);
-    transform-origin: top;
-    transition: transform 400ms ease-in-out;
-
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    margin-bottom: 1em;
-    margin-left: 1em;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
-
-
-}
-
-nav a:hover {
-    color: #FFDB35;
-}
-
-.nav-toggle:checked ~ nav {
-    transform: scale(1, 1);
-}
-
-.nav-toggle:checked ~ nav a {
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
-
-}
-
-@media screen and (min-width: 800px) {
-    .nav-toggle-label {
-        display: none;
-    }
-
-    header {
-        position: sticky;
-        top: 0;
-    }
-
-    header::after {
-        content: "";
-        display: table;
-        clear: both;
-
-    }
-
-    .logo {
-        float: left;
-        padding: 1px 0;
-
-    }
-
-    nav {
-        all: unset;
-
-        padding-left: 800px;
-    }
-
-    nav a {
-        opacity: 1;
-    }
-
-    nav a::before {
-        content: '';
-        display: block;
-        height: 5px;
-    }
-
-    nav ul {
-        display: flex;
-        margin: 0;
-
-        padding-left: 600px;
-
-    }
-
-    nav li {
-        margin-left: 3em;
-        margin-bottom: 0;
-    }
-
-
-}
-
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--     <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="aboutCSS.css">
+    <link rel="stylesheet" href="stylesheet2.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="stylesheet2.css">
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Sedgwick+Ave&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+    </style>
+
+</head>
+<body>
+<header>
+    <div>
+        <a href="index.html">
+        </a>
+        <a href="index.html">
+            <label class="logo"><img src="F%20I-logos_white%201.png" alt="logo"></label>
+
+        </a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <nav>
+            <ul id="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </div>
+</header>
+<div class="section">
+    <div class="container">
+        <div class="title">
+            <h1>Hello, I am Fuad</h1>
+        </div>
+        <div class="content">
+            <div class="article">
+                <h3>-My Background</h3>
+                <p>I am an Information Technology student who loves solving problems while collaborating with team
+                    members.
+                    I have basic web development skills and fundamental knowledge of information networking.
+                    Currently, attending the University of Washington with an expected graduation of winter 2023.
+                    I also have two years of experience in logistics operation and management at Amazon logistics.
+                    I worked at Amazon as operations lead where I co-led a team of 20 daily.
+                    Currently, seeking summer 2023 Information Technology Internship</p>
+                <div class="button">
+                    <a href="https://www.linkedin.com/in/fuadi/">Hire Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="pp-removebg%201.png" alt="">
+        </div>
+        <div class="social">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/fuadi/"><i class="fab fa-linkedin-in"></i></a>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
