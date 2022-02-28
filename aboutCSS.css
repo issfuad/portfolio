@@ -36,16 +36,6 @@
 
 }
 
-.container .title h1::after {
-    content: "";
-    height: 3px;
-    width: 300px;
-    background-color: #86888a;
-    border-radius: 25px;
-    display: block;
-    margin: auto;
-}
-
 .content {
     float: left;
     width: 55%;
